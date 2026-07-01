@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SAT Day-by-Day Calendar — to Sep 12, 2026</title>
+<title>SAT Day-by-Day Calendar v4 — exact Khan lessons</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
@@ -12,6 +12,8 @@
     --ink:#0B2238; --sky:#1763B8; --sky-soft:#E7F0FA;
     --amber:#9A5A00; --amber-soft:#FBEFD6;
     --teal:#1B6F52; --teal-soft:#E1F2EA;
+    --red:#B23A3A; --red-soft:#FBE4E4;
+    --plum:#6B3FA0; --plum-soft:#EFE7F7;
     --paper:#F5F7F9; --card:#FFFFFF; --line:#E2E7ED;
     --muted:#5C6B79; --text:#15242F;
     --disp:"Space Grotesk", system-ui, sans-serif;
@@ -20,230 +22,273 @@
   }
   *{box-sizing:border-box;}
   body{margin:0; background:var(--paper); color:var(--text); font-family:var(--body); line-height:1.5; -webkit-print-color-adjust:exact; print-color-adjust:exact;}
-  .wrap{max-width:920px; margin:0 auto; padding:32px 24px 56px;}
+  .wrap{max-width:1000px; margin:0 auto; padding:32px 24px 56px;}
   .eyebrow{font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--sky); margin:0 0 6px;}
-  h1{font-family:var(--disp); font-weight:700; font-size:32px; line-height:1.05; margin:0 0 8px; color:var(--ink); letter-spacing:-.01em;}
+  h1{font-family:var(--disp); font-weight:700; font-size:31px; line-height:1.05; margin:0 0 8px; color:var(--ink); letter-spacing:-.01em;}
   h2{font-family:var(--disp); font-weight:600; font-size:19px; color:var(--ink); margin:30px 0 6px; letter-spacing:-.01em;}
   .wk-sub{font-family:var(--mono); font-size:11.5px; color:var(--muted); margin:0 0 10px; letter-spacing:.03em;}
-  p{margin:0 0 10px;} .lede{color:var(--muted); font-size:15px; max-width:64ch;}
-  .head{border-bottom:2px solid var(--ink); padding-bottom:16px; margin-bottom:10px;}
+  p{margin:0 0 10px;} .lede{color:var(--muted); font-size:15px; max-width:66ch;}
+  .head{border-bottom:2px solid var(--ink); padding-bottom:16px; margin-bottom:16px;}
 
   .card{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px 18px; margin-bottom:14px;}
-  .grid3{display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px;}
-  .tmpl{background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px 16px;}
+  .grid2{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
   .tmpl h3{font-family:var(--disp); font-size:14px; margin:0 0 8px; color:var(--ink);}
   .tmpl .hrs{font-family:var(--mono); font-size:11px; color:var(--sky); letter-spacing:.04em; text-transform:uppercase;}
-  .tmpl ol{margin:8px 0 0; padding-left:16px; font-size:12.5px;}
-  .tmpl ol li{margin-bottom:5px;}
-  .tmpl .q{display:inline-block; margin-top:8px; font-family:var(--mono); font-size:11.5px; color:var(--ink); background:var(--sky-soft); padding:2px 8px; border-radius:6px;}
+  .tmpl ol{margin:8px 0 0; padding-left:16px; font-size:12.5px;} .tmpl ol li{margin-bottom:5px;}
 
-  table{width:100%; border-collapse:collapse; font-size:12.8px;}
+  table{width:100%; border-collapse:collapse; font-size:12.3px;}
   th{text-align:left; font-family:var(--disp); font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); padding:0 9px 7px; border-bottom:1px solid var(--line);}
-  td{padding:8px 9px; border-bottom:1px solid var(--line); vertical-align:top;}
+  td{padding:9px; border-bottom:1px solid var(--line); vertical-align:top;}
   tr:last-child td{border-bottom:none;}
   .day{font-family:var(--mono); font-weight:600; font-size:11.5px; color:var(--ink); white-space:nowrap;}
-  .test td{background:var(--sky-soft);}
-  .test .day{color:var(--sky);}
+  .day small{display:block; font-weight:500; color:var(--muted); margin-top:2px;}
+  .k{font-family:var(--mono); font-size:10px; color:var(--sky); letter-spacing:.02em;}
+  .b{font-family:var(--mono); font-size:10px; color:var(--muted); letter-spacing:.02em;}
+  .w{font-family:var(--mono); font-size:10px; color:var(--plum); letter-spacing:.02em;}
+  .cell-line{margin-bottom:3px;}
+  .test td{background:var(--sky-soft);} .test .day{color:var(--sky);}
   .reh td{background:var(--amber-soft);} .reh .day{color:var(--amber);}
   .rest td{background:#F3F5F7;} .rest .day{color:var(--muted);}
   .exam td{background:var(--teal-soft);} .exam .day{color:var(--teal); font-weight:600;}
   .light{color:var(--muted); font-style:italic;}
   .ev{font-family:var(--disp); font-weight:600; color:var(--ink);}
+  .flag{display:inline-block; font-family:var(--mono); font-size:9px; padding:0 5px; border-radius:4px; background:var(--red-soft); color:var(--red);}
+  .flagd{display:inline-block; font-family:var(--mono); font-size:9px; padding:0 5px; border-radius:4px; background:var(--amber-soft); color:var(--amber);}
   .note{background:var(--amber-soft); border-left:3px solid var(--amber); border-radius:0 8px 8px 0; padding:12px 16px; font-size:13px; color:#4a3500; margin-bottom:14px;}
   .note b{color:var(--amber);}
-  .legend{font-family:var(--mono); font-size:11px; color:var(--muted); display:flex; gap:16px; flex-wrap:wrap; margin:2px 0 16px;}
+  .baseline{display:grid; grid-template-columns:auto 1fr; gap:20px; align-items:center; background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px 20px; margin-bottom:16px;}
+  .score{text-align:center; padding-right:20px; border-right:1px solid var(--line);}
+  .score .big{font-family:var(--disp); font-weight:700; font-size:34px; color:var(--ink); line-height:1;}
+  .score .lbl{font-family:var(--mono); font-size:10px; color:var(--muted); letter-spacing:.1em; text-transform:uppercase; margin-top:4px;}
+  .score .sec{font-family:var(--mono); font-size:11px; color:var(--muted); margin-top:6px;}
+  .pri-cols{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+  .pri-cols h4{font-family:var(--disp); font-size:12px; margin:0 0 6px; color:var(--ink); text-transform:uppercase; letter-spacing:.04em;}
+  .pri-cols ol{margin:0; padding-left:18px; font-size:12.5px;} .pri-cols ol li{margin-bottom:3px;}
+  .pri-cols .hot{color:var(--red); font-weight:600;} .pri-cols .cool{color:var(--muted);}
+  .legend{font-family:var(--mono); font-size:10.5px; color:var(--muted); display:flex; gap:14px; flex-wrap:wrap; margin:2px 0 16px;}
   .legend span b{padding:1px 7px; border-radius:5px;}
+  .umap{display:grid; grid-template-columns:1fr 1fr; gap:18px; font-size:11.5px;}
+  .umap h4{font-family:var(--disp); font-size:12px; margin:0 0 6px; color:var(--ink); text-transform:uppercase; letter-spacing:.04em;}
+  .umap .u{font-family:var(--mono); font-size:10.5px; color:var(--text); margin-bottom:2px;}
+  .umap .u b{color:var(--sky);}
   .foot{margin-top:24px; padding-top:14px; border-top:1px solid var(--line); font-size:12px; color:var(--muted);}
   a{color:var(--sky);}
-  @media (max-width:680px){ .grid3{grid-template-columns:1fr;} h1{font-size:26px;} table{font-size:12px;} }
-  @media print{ body{background:#fff;} .wrap{padding:0;} .card,table{break-inside:avoid;} h2{break-after:avoid;} }
+  @media (max-width:820px){ .grid2,.pri-cols,.baseline,.umap{grid-template-columns:1fr;} .score{border-right:none; border-bottom:1px solid var(--line); padding:0 0 12px;} h1{font-size:25px;} table{font-size:11.6px;} }
+  @media print{ body{background:#fff;} .wrap{padding:0;} .card,table,.baseline{break-inside:avoid;} h2{break-after:avoid;} }
 </style>
 </head>
 <body>
 <div class="wrap">
 
   <div class="head">
-    <p class="eyebrow">Digital SAT &middot; Daily Tracker</p>
+    <p class="eyebrow">Digital SAT &middot; Daily Tracker &middot; v4 — exact Khan lessons</p>
     <h1>Day-by-Day Calendar</h1>
-    <p class="lede">The companion to the Flight Plan. The <b>how</b> is one repeatable template; the calendar below just tells her which skill to aim it at each day, all the way to September 12.</p>
+    <p class="lede">Every study day names the real Khan unit and lesson to open, the Question Bank skill to drill, and the Wren &amp; Martin chapter to reinforce. Learn → drill → reinforce, eight Bluebook tests (one done), up to ~6h on heavy days.</p>
   </div>
 
-  <h2>The 2-hour template — use it every day</h2>
-  <div class="grid3">
-    <div class="tmpl">
-      <span class="hrs">Summer weekday · per subject</span>
-      <h3>2 hours, two blocks</h3>
-      <ol>
-        <li><b>5 min</b> — re-work yesterday's logged misses.</li>
-        <li><b>35 min</b> — Question Bank set: today's skill, ~10–12 questions at the target difficulty.</li>
-        <li><b>15 min</b> — check answers, read every explanation, log misses to the Google Sheet.</li>
-        <li><b>10 min</b> — break.</li>
-        <li><b>35 min</b> — second set: next difficulty up, or the paired skill, ~10–12 questions.</li>
-        <li><b>15 min</b> — review + log + jot the pattern behind today's misses.</li>
-      </ol>
-      <span class="q">≈ 20–24 questions / subject</span>
+  <div class="baseline">
+    <div class="score">
+      <div class="big">1240</div>
+      <div class="lbl">Baseline</div>
+      <div class="sec">R&amp;W 610 &middot; Math 630<br>target 1350+</div>
     </div>
-    <div class="tmpl">
-      <span class="hrs">School weekday (from Sep 2) · per subject</span>
-      <h3>1 hour, one block</h3>
-      <ol>
-        <li><b>5 min</b> — re-work yesterday's misses.</li>
-        <li><b>35 min</b> — one set of ~10 questions on the day's skill.</li>
-        <li><b>15 min</b> — check, read explanations, log.</li>
-      </ol>
-      <span class="q">≈ 10 questions / subject</span>
-    </div>
-    <div class="tmpl">
-      <span class="hrs">Weekend · light, 2 hrs max</span>
-      <h3>Recover &amp; consolidate</h3>
-      <ol>
-        <li>Re-work the week's logged misses.</li>
-        <li>15–20 min English vocabulary from context errors.</li>
-        <li>One short mixed set — no new heavy content.</li>
-      </ol>
-      <span class="q">Rest is part of the plan</span>
+    <div class="pri-cols">
+      <div><h4>Math focus</h4><ol>
+        <li class="hot">Advanced Math — climb Medium → Advanced</li>
+        <li class="hot">Problem-Solving &amp; Data</li>
+        <li>Geometry &amp; Trig</li>
+        <li class="cool">Algebra — maintenance</li>
+      </ol></div>
+      <div><h4>Reading &amp; Writing focus</h4><ol>
+        <li class="hot">Craft &amp; Structure</li>
+        <li class="hot">Information &amp; Ideas</li>
+        <li>Standard English Conventions — refresh</li>
+        <li class="cool">Expression of Ideas — maintenance</li>
+      </ol></div>
     </div>
   </div>
 
-  <div class="note"><b>Question volume.</b> The bank holds <b>1,756 Math</b> and <b>1,688 Reading &amp; Writing</b> questions. At ~20 per subject on summer weekdays that's roughly <b>900 of each</b> across the summer — deliberately leaving the rest as a fresh reservoir for the school-year weeks and re-drills. The six Bluebook tests supply the timed, adaptive reps on top.</div>
+  <h2>How each study day runs</h2>
+  <div class="grid2">
+    <div class="card tmpl">
+      <span class="hrs">Math block · ~2–3 hrs</span>
+      <ol>
+        <li><b>Khan (learn):</b> open the day's unit &amp; lesson — read the "<b>| Lesson</b>", watch the Top-tips + Worked/Quick-example videos, then do the leveled practice ("get 3 of 4 to level up").</li>
+        <li><b>Question Bank (drill):</b> ~10–12 questions on the same skill at the day's difficulty.</li>
+        <li><b>Review + log</b> every miss to the Google Sheet.</li>
+      </ol>
+    </div>
+    <div class="card tmpl">
+      <span class="hrs">English block · ~2–3 hrs</span>
+      <ol>
+        <li><b>Khan (learn):</b> the day's R&amp;W lesson — "| Lesson" + "Top tips" + Worked example, then the leveled practice.</li>
+        <li><b>Question Bank (drill):</b> a set on the same skill.</li>
+        <li><b>Wren &amp; Martin (reinforce):</b> read the mapped chapter + a few exercises (grammar days).</li>
+        <li><b>Review + log.</b></li>
+      </ol>
+    </div>
+  </div>
+
+  <h2>Khan unit map — the "U#" in each cell</h2>
+  <div class="card">
+    <div class="umap">
+      <div>
+        <h4>SAT Math (13 units)</h4>
+        <div class="u"><b>U2–U5</b> Foundations: Algebra · PSDA · Advanced math · Geometry &amp; trig</div>
+        <div class="u"><b>U6–U9</b> Medium: Algebra · PSDA · Advanced math · Geometry &amp; trig</div>
+        <div class="u"><b>U10–U13</b> Advanced: Algebra · PSDA · Advanced math · Geometry &amp; trig</div>
+        <div class="u" style="margin-top:6px; color:var(--muted);">Weak areas: climb Medium → Advanced. Strengths: Medium check only.</div>
+      </div>
+      <div>
+        <h4>SAT Reading &amp; Writing (12 units)</h4>
+        <div class="u"><b>U2–U4</b> Foundations: Info &amp; Ideas · Craft &amp; Structure · Expression + Conventions</div>
+        <div class="u"><b>U5–U7</b> Medium: Info &amp; Ideas · Craft &amp; Structure · Expression + Conventions</div>
+        <div class="u"><b>U8–U10</b> Advanced: Info &amp; Ideas · Craft &amp; Structure · Expression + Conventions</div>
+        <div class="u"><b>U11</b> Challenge: highest-difficulty &nbsp; <b>U12</b> SAT Grammar practice</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="note"><b>Two R&amp;W units to lean on late:</b> <b>U12 (SAT Grammar practice)</b> has targeted drills — Subject-verb agreement, Pronoun-antecedent, Plurals &amp; possessives, Verb forms, Subject-modifier placement, Linking clauses, Supplements, Punctuation — each with a grammar guide + worked example. Pair these with Wren &amp; Martin. <b>U11 (Challenge)</b> is the hardest mixed practice — save it for the endgame weeks.</div>
 
   <div class="legend">
-    <span><b style="background:var(--sky-soft); color:var(--sky);">Practice test</b></span>
+    <span><b style="background:var(--sky-soft); color:var(--sky);">Practice test (7 left)</b></span>
     <span><b style="background:var(--amber-soft); color:var(--amber);">Dress rehearsal</b></span>
     <span><b style="background:#F3F5F7; color:var(--muted);">Light / rest</b></span>
     <span><b style="background:var(--teal-soft); color:var(--teal);">Exam</b></span>
+    <span><b class="flag">precision</b> grid-in accuracy &nbsp; <b class="flagd">~6h</b> heavy day</span>
   </div>
 
-  <h2>Week 1 &middot; Climb begins</h2>
-  <p class="wk-sub">Jul 1 – 5 &middot; baseline + first Algebra and grammar reps</p>
-  <table><thead><tr><th style="width:108px">Day</th><th>Math</th><th>Reading &amp; Writing</th></tr></thead><tbody>
-    <tr class="test"><td class="day">Wed Jul 1</td><td colspan="2"><span class="ev">Practice Test 1 — baseline.</span> Full Bluebook test, then study the score report. Send results to tune the plan.</td></tr>
-    <tr><td class="day">Thu Jul 2</td><td>Linear equations, 1 variable <span class="light">(easy→med)</span></td><td>Boundaries — punctuation <span class="light">(easy→med)</span></td></tr>
-    <tr><td class="day">Fri Jul 3</td><td>Linear equations, 2 variables</td><td>Form, Structure &amp; Sense — agreement, tense</td></tr>
-    <tr class="rest"><td class="day">Sat Jul 4</td><td colspan="2" class="light">Light — re-work the week's misses, or rest (holiday).</td></tr>
+  <h2>Week 1 &middot; Straight to the gap</h2>
+  <p class="wk-sub">Jul 1 – 5 &middot; baseline done → open Advanced Math + reading</p>
+  <table><thead><tr><th style="width:92px">Day</th><th>Math — Khan + Bank</th><th>English — Khan + Bank + Wren</th></tr></thead><tbody>
+    <tr class="rest"><td class="day">Wed Jul 1</td><td colspan="2"><span class="ev">Practice Test 1 — done.</span> Baseline 1240. <b>7 Bluebook tests remain.</b></td></tr>
+    <tr><td class="day">Thu Jul 2<small>~5h</small></td><td><div class="cell-line"><span class="k">Khan U8</span> Factoring quadratic &amp; polynomial expressions · Operations with polynomials</div><div class="cell-line"><span class="b">Bank</span> Equivalent expressions (med)</div></td><td><div class="cell-line"><span class="k">Khan U6</span> Words in context</div><div class="cell-line"><span class="b">Bank</span> Words in Context</div><div class="cell-line"><span class="w">Wren</span> Bk1 Ch3 — The Phrase &amp; the Clause</div></td></tr>
+    <tr><td class="day">Fri Jul 3<small>~5h</small></td><td><div class="cell-line"><span class="k">Khan U8</span> Operations with rational expressions · Radicals &amp; rational exponents</div><div class="cell-line"><span class="b">Bank</span> Equivalent expressions (med)</div></td><td><div class="cell-line"><span class="k">Khan U5</span> Central ideas and details</div><div class="cell-line"><span class="b">Bank</span> Central Ideas &amp; Details</div><div class="cell-line"><span class="w">Wren</span> Bk2 Ch1 — Analysis of Simple Sentences</div></td></tr>
+    <tr class="rest"><td class="day">Sat Jul 4</td><td colspan="2" class="light">Light — rework Test 1 misses, or rest (holiday).</td></tr>
     <tr class="rest"><td class="day">Sun Jul 5</td><td colspan="2" class="light">Light — vocabulary + one short mixed set.</td></tr>
   </tbody></table>
 
-  <h2>Week 2 &middot; Algebra to near-perfect</h2>
-  <p class="wk-sub">Jul 6 – 12 &middot; finish the Algebra skills + Conventions</p>
-  <table><thead><tr><th style="width:108px">Day</th><th>Math</th><th>Reading &amp; Writing</th></tr></thead><tbody>
-    <tr><td class="day">Mon Jul 6</td><td>Linear functions</td><td>Boundaries <span class="light">(med)</span></td></tr>
-    <tr><td class="day">Tue Jul 7</td><td>Systems of linear equations</td><td>Form/Structure/Sense — pronouns, modifiers</td></tr>
-    <tr><td class="day">Wed Jul 8</td><td>Linear inequalities</td><td>Boundaries <span class="light">(med→hard)</span></td></tr>
-    <tr><td class="day">Thu Jul 9</td><td>Algebra — mixed review, all 5 skills</td><td>Conventions — mixed review</td></tr>
-    <tr><td class="day">Fri Jul 10</td><td>Algebra — timed set <span class="light">(med→hard)</span></td><td>Conventions — timed set</td></tr>
-    <tr class="rest"><td class="day">Sat Jul 11</td><td colspan="2" class="light">Light — misses + vocabulary.</td></tr>
-    <tr class="rest"><td class="day">Sun Jul 12</td><td colspan="2" class="light">Light — mixed mini-set.</td></tr>
+  <h2>Week 2 &middot; Advanced Math core + reading</h2>
+  <p class="wk-sub">Jul 6 – 12 &middot; Medium: Advanced math (U8) &middot; Test 2 Sat Jul 11</p>
+  <table><thead><tr><th style="width:92px">Day</th><th>Math — Khan + Bank</th><th>English — Khan + Bank + Wren</th></tr></thead><tbody>
+    <tr><td class="day">Mon Jul 6<small>~6h</small></td><td><div class="cell-line"><span class="k">Khan U8</span> Solving quadratic equations</div><div class="cell-line"><span class="b">Bank</span> Nonlinear equations, 1 var · Desmos roots <span class="flag">precision</span></div></td><td><div class="cell-line"><span class="k">Khan U5</span> Command of evidence: textual</div><div class="cell-line"><span class="b">Bank</span> Command of Evidence (textual)</div><div class="cell-line"><span class="w">Wren</span> Bk2 Ch2–3 — Phrases; Clauses</div></td></tr>
+    <tr><td class="day">Tue Jul 7<small>~5h</small></td><td><div class="cell-line"><span class="k">Khan U8</span> Linear and quadratic systems</div><div class="cell-line"><span class="b">Bank</span> Nonlinear systems</div></td><td><div class="cell-line"><span class="k">Khan U5</span> Inferences</div><div class="cell-line"><span class="b">Bank</span> Inferences</div><div class="cell-line"><span class="w">Wren</span> Bk2 Ch4 — Simple, Compound &amp; Complex</div></td></tr>
+    <tr><td class="day">Wed Jul 8<small>~6h</small></td><td><div class="cell-line"><span class="k">Khan U8</span> Nonlinear functions · Quadratic graphs</div><div class="cell-line"><span class="b">Bank</span> Nonlinear functions</div></td><td><div class="cell-line"><span class="k">Khan U6</span> Text structure and purpose · Part-to-whole relationships</div><div class="cell-line"><span class="b">Bank</span> Text Structure &amp; Purpose</div><div class="cell-line"><span class="w">Wren</span> Bk1 Ch24–25 — Tenses</div></td></tr>
+    <tr><td class="day">Thu Jul 9<small>~5h</small></td><td><div class="cell-line"><span class="k">Khan U8</span> Radical, rational &amp; absolute value equations · Quadratic &amp; exponential word problems</div><div class="cell-line"><span class="b">Bank</span> Advanced Math mixed (med→hard)</div></td><td><div class="cell-line"><span class="k">Khan U5</span> Command of evidence: quantitative</div><div class="cell-line"><span class="b">Bank</span> Command of Evidence (data)</div></td></tr>
+    <tr class="rest"><td class="day">Fri Jul 10</td><td colspan="2" class="light">Lighter (pre-test) — Advanced Math mixed set; Craft + Info mixed set; error log.</td></tr>
+    <tr class="test"><td class="day">Sat Jul 11</td><td colspan="2"><span class="ev">Practice Test 2.</span> Full Bluebook + same-day review of every miss.</td></tr>
+    <tr class="rest"><td class="day">Sun Jul 12</td><td colspan="2" class="light">Light — analyze Test 2, log by skill vs baseline.</td></tr>
   </tbody></table>
 
-  <h2>Week 3 &middot; Into Advanced Math</h2>
-  <p class="wk-sub">Jul 13 – 19 &middot; Algebra hard set, equivalent expressions, Words in Context &middot; Test 2</p>
-  <table><thead><tr><th style="width:108px">Day</th><th>Math</th><th>Reading &amp; Writing</th></tr></thead><tbody>
-    <tr><td class="day">Mon Jul 13</td><td>Algebra — hard set</td><td>Words in Context <span class="light">(easy→med)</span></td></tr>
-    <tr><td class="day">Tue Jul 14</td><td>Equivalent expressions — intro</td><td>Words in Context <span class="light">(med)</span></td></tr>
-    <tr><td class="day">Wed Jul 15</td><td>Equivalent expressions <span class="light">(med)</span></td><td>Text Structure &amp; Purpose</td></tr>
-    <tr class="rest"><td class="day">Thu Jul 16</td><td colspan="2" class="light">Light pre-test review — error log only, no new content.</td></tr>
-    <tr class="test"><td class="day">Fri Jul 17</td><td colspan="2"><span class="ev">Practice Test 2.</span> Full Bluebook + same-day review of every miss.</td></tr>
-    <tr class="rest"><td class="day">Sat Jul 18</td><td colspan="2" class="light">Light — analyze Test 2, log misses by skill.</td></tr>
-    <tr class="rest"><td class="day">Sun Jul 19</td><td colspan="2" class="light">Light — mini-set on the skills Test 2 exposed.</td></tr>
+  <h2>Week 3 &middot; Advanced Math → Advanced tier; start Data</h2>
+  <p class="wk-sub">Jul 13 – 19 &middot; Advanced: Advanced math (U12), then Medium: PSDA (U7)</p>
+  <table><thead><tr><th style="width:92px">Day</th><th>Math — Khan + Bank</th><th>English — Khan + Bank + Wren</th></tr></thead><tbody>
+    <tr><td class="day">Mon Jul 13<small>~6h</small></td><td><div class="cell-line"><span class="k">Khan U12</span> Factoring · Operations with polynomials &amp; rational expressions</div><div class="cell-line"><span class="b">Bank</span> Equivalent expressions (hard) · Desmos</div></td><td><div class="cell-line"><span class="k">Khan U9</span> Words in context</div><div class="cell-line"><span class="b">Bank</span> Words in Context (hard)</div><div class="cell-line"><span class="w">Wren</span> Bk1 Ch26 + Bk2 Ch15 — Future; Sequence of Tenses</div></td></tr>
+    <tr><td class="day">Tue Jul 14<small>~5h</small></td><td><div class="cell-line"><span class="k">Khan U12</span> Nonlinear functions · Quadratic graphs · Exponential graphs</div><div class="cell-line"><span class="b">Bank</span> Nonlinear functions (hard) <span class="flag">precision</span></div></td><td><div class="cell-line"><span class="k">Khan U8</span> Inferences</div><div class="cell-line"><span class="b">Bank</span> Inferences (hard)</div></td></tr>
+    <tr><td class="day">Wed Jul 15<small>~5h</small></td><td><div class="cell-line"><span class="k">Khan U12</span> Solving quadratic equations · Linear &amp; quadratic systems · Radical/rational/abs value equations</div><div class="cell-line"><span class="b">Bank</span> Advanced Math hard mixed · Desmos</div></td><td><div class="cell-line"><span class="k">Khan U9</span> Cross-text connections</div><div class="cell-line"><span class="b">Bank</span> Cross-Text Connections</div><div class="cell-line"><span class="w">Wren</span> Bk2 Ch10–11 — Transformation of Sentences</div></td></tr>
+    <tr><td class="day">Thu Jul 16<small>~5h</small></td><td><div class="cell-line"><span class="k">Khan U7</span> Ratios, rates &amp; proportions · Unit conversion</div><div class="cell-line"><span class="b">Bank</span> Ratios / rates / units</div></td><td><div class="cell-line"><span class="k">Khan U8</span> Central ideas and details</div><div class="cell-line"><span class="b">Bank</span> Central Ideas (hard)</div><div class="cell-line"><span class="w">Wren</span> Bk2 Ch12–14 — Synthesis of Sentences</div></td></tr>
+    <tr><td class="day">Fri Jul 17<small>~5h</small></td><td><div class="cell-line"><span class="k">Khan U7</span> Percentages</div><div class="cell-line"><span class="b">Bank</span> Percentages <span class="flag">precision</span></div></td><td><div class="cell-line"><span class="k">Khan U8</span> Command of evidence: textual &amp; quantitative</div><div class="cell-line"><span class="b">Bank</span> Command of Evidence mixed</div></td></tr>
+    <tr class="rest"><td class="day">Sat Jul 18</td><td colspan="2" class="light">Light — misses + vocabulary.</td></tr>
+    <tr class="rest"><td class="day">Sun Jul 19</td><td colspan="2" class="light">Light — mini-set.</td></tr>
   </tbody></table>
 
-  <h2>Week 4 &middot; Advanced Math core</h2>
-  <p class="wk-sub">Jul 20 – 26 &middot; quadratics, nonlinear systems &amp; functions, Craft &amp; Structure</p>
-  <table><thead><tr><th style="width:108px">Day</th><th>Math</th><th>Reading &amp; Writing</th></tr></thead><tbody>
-    <tr><td class="day">Mon Jul 20</td><td>Nonlinear equations, 1 variable (quadratics)</td><td>Words in Context <span class="light">(med→hard)</span></td></tr>
-    <tr><td class="day">Tue Jul 21</td><td>Quadratics — factoring, formula, Desmos roots</td><td>Text Structure &amp; Purpose <span class="light">(med)</span></td></tr>
-    <tr><td class="day">Wed Jul 22</td><td>Nonlinear systems</td><td>Cross-Text Connections</td></tr>
-    <tr><td class="day">Thu Jul 23</td><td>Nonlinear functions — graphs, transformations</td><td>Craft &amp; Structure — mixed review</td></tr>
-    <tr><td class="day">Fri Jul 24</td><td>Advanced Math — mixed timed set</td><td>Craft &amp; Structure — timed set</td></tr>
-    <tr class="rest"><td class="day">Sat Jul 25</td><td colspan="2" class="light">Light — misses + vocabulary.</td></tr>
-    <tr class="rest"><td class="day">Sun Jul 26</td><td colspan="2" class="light">Light — mini-set.</td></tr>
+  <h2>Week 4 &middot; Problem-Solving &amp; Data (Desmos) + reading</h2>
+  <p class="wk-sub">Jul 20 – 26 &middot; Medium: PSDA (U7) &middot; Test 3 Sat Jul 25</p>
+  <table><thead><tr><th style="width:92px">Day</th><th>Math — Khan + Bank</th><th>English — Khan + Bank + Wren</th></tr></thead><tbody>
+    <tr><td class="day">Mon Jul 20<small>~6h</small></td><td><div class="cell-line"><span class="k">Khan U7</span> Center, spread &amp; shape of distributions · Data representations</div><div class="cell-line"><span class="b">Bank</span> One-var data · Desmos mean/median/stdev</div></td><td><div class="cell-line"><span class="k">Khan U8</span> Central ideas and details (advanced)</div><div class="cell-line"><span class="b">Bank</span> Central Ideas (hard)</div><div class="cell-line"><span class="w">Wren</span> Bk2 Ch17 — Agreement of Verb with Subject</div></td></tr>
+    <tr><td class="day">Tue Jul 21<small>~6h</small></td><td><div class="cell-line"><span class="k">Khan U7</span> Scatterplots · Linear &amp; exponential growth</div><div class="cell-line"><span class="b">Bank</span> Two-var data · Desmos regression (<code>~</code>)</div></td><td><div class="cell-line"><span class="k">Khan U9</span> Text structure and purpose (advanced)</div><div class="cell-line"><span class="b">Bank</span> Text Structure (hard)</div><div class="cell-line"><span class="w">Wren</span> Bk2 Ch18 — Nouns &amp; Pronouns</div></td></tr>
+    <tr><td class="day">Wed Jul 22<small>~5h</small></td><td><div class="cell-line"><span class="k">Khan U7</span> Probability and relative frequency</div><div class="cell-line"><span class="b">Bank</span> Probability &amp; conditional</div></td><td><div class="cell-line"><span class="k">Khan U8</span> Command of evidence: quantitative (advanced)</div><div class="cell-line"><span class="b">Bank</span> Command of Evidence data (hard)</div></td></tr>
+    <tr><td class="day">Thu Jul 23<small>~5h</small></td><td><div class="cell-line"><span class="k">Khan U7</span> Data inferences · <span class="k">U11</span> Evaluating statistical claims</div><div class="cell-line"><span class="b">Bank</span> Inference / statistical claims</div></td><td><div class="cell-line"><span class="k">Khan U9</span> Words in context (advanced)</div><div class="cell-line"><span class="b">Bank</span> Words in Context (hard)</div></td></tr>
+    <tr class="rest"><td class="day">Fri Jul 24</td><td colspan="2" class="light">Lighter (pre-test) — PSDA + Advanced Math mixed; Craft mixed; error log.</td></tr>
+    <tr class="test"><td class="day">Sat Jul 25</td><td colspan="2"><span class="ev">Practice Test 3.</span> Full Bluebook + review.</td></tr>
+    <tr class="rest"><td class="day">Sun Jul 26</td><td colspan="2" class="light">Light — analyze Test 3; track Advanced Math trend.</td></tr>
   </tbody></table>
 
-  <h2>Week 5 &middot; Advanced Math hard + Desmos</h2>
-  <p class="wk-sub">Jul 27 – Aug 2 &middot; graph-it-in-Desmos drills, Information &amp; Ideas &middot; Test 3</p>
-  <table><thead><tr><th style="width:108px">Day</th><th>Math</th><th>Reading &amp; Writing</th></tr></thead><tbody>
-    <tr><td class="day">Mon Jul 27</td><td>Advanced Math — hard, solved via Desmos graphing</td><td>Central Ideas &amp; Details</td></tr>
-    <tr><td class="day">Tue Jul 28</td><td>Equivalent expressions — hard</td><td>Command of Evidence — textual</td></tr>
-    <tr><td class="day">Wed Jul 29</td><td>Advanced Math — mixed hard</td><td>Command of Evidence — quantitative / data</td></tr>
-    <tr class="rest"><td class="day">Thu Jul 30</td><td colspan="2" class="light">Light pre-test review.</td></tr>
-    <tr class="test"><td class="day">Fri Jul 31</td><td colspan="2"><span class="ev">Practice Test 3.</span> Full Bluebook + review.</td></tr>
-    <tr class="rest"><td class="day">Sat Aug 1</td><td colspan="2" class="light">Light — analyze Test 3, log.</td></tr>
-    <tr class="rest"><td class="day">Sun Aug 2</td><td colspan="2" class="light">Light — weak-skill mini-set.</td></tr>
+  <h2>Week 5 &middot; Advanced-tier Data + reinforce Advanced Math</h2>
+  <p class="wk-sub">Jul 27 – Aug 2 &middot; Advanced: PSDA (U11), Advanced math (U12), start Geometry</p>
+  <table><thead><tr><th style="width:92px">Day</th><th>Math — Khan + Bank</th><th>English — Khan + Bank + Wren</th></tr></thead><tbody>
+    <tr><td class="day">Mon Jul 27<small>~6h</small></td><td><div class="cell-line"><span class="k">Khan U11</span> Scatterplots · Data inferences · Evaluating statistical claims</div><div class="cell-line"><span class="b">Bank</span> PSDA (hard)</div></td><td><div class="cell-line"><span class="k">Khan U8</span> Inferences (advanced)</div><div class="cell-line"><span class="b">Bank</span> Inferences (hard)</div><div class="cell-line"><span class="w">Wren</span> Bk1 Ch34–37 — Adverbs</div></td></tr>
+    <tr><td class="day">Tue Jul 28<small>~6h</small></td><td><div class="cell-line"><span class="k">Khan U12</span> revisit weakest lessons from tests</div><div class="cell-line"><span class="b">Bank</span> Advanced Math (hard) <span class="flag">precision</span></div></td><td><div class="cell-line"><span class="k">Khan U8</span> Command of evidence (advanced)</div><div class="cell-line"><span class="b">Bank</span> Command of Evidence (hard)</div><div class="cell-line"><span class="w">Wren</span> Bk2 Ch19–21 — Adjectives, Verbs, Adverbs</div></td></tr>
+    <tr><td class="day">Wed Jul 29<small>~5h</small></td><td><div class="cell-line"><span class="k">Khan U11</span> Percentages · Ratios (advanced)</div><div class="cell-line"><span class="b">Bank</span> PSDA mixed timed</div></td><td><div class="cell-line"><span class="b">Bank</span> Information &amp; Ideas mixed timed</div></td></tr>
+    <tr><td class="day">Thu Jul 30<small>~5h</small></td><td><div class="cell-line"><span class="k">Khan U9</span> Area and volume</div><div class="cell-line"><span class="b">Bank</span> Area &amp; volume</div></td><td><div class="cell-line"><span class="k">Khan U9</span> Cross-text connections (advanced)</div><div class="cell-line"><span class="b">Bank</span> Cross-Text Connections (hard)</div></td></tr>
+    <tr><td class="day">Fri Jul 31<small>~4h</small></td><td><div class="cell-line"><span class="k">Khan U9</span> Congruence, similarity &amp; angle relationships</div><div class="cell-line"><span class="b">Bank</span> Lines / angles / triangles</div></td><td><div class="cell-line"><span class="b">Bank</span> Craft &amp; Structure mixed</div></td></tr>
+    <tr class="rest"><td class="day">Sat Aug 1</td><td colspan="2" class="light">Light — misses + vocabulary.</td></tr>
+    <tr class="rest"><td class="day">Sun Aug 2</td><td colspan="2" class="light">Light — mini-set.</td></tr>
   </tbody></table>
 
-  <h2>Week 6 &middot; Problem-Solving &amp; Data</h2>
-  <p class="wk-sub">Aug 3 – 9 &middot; ratios, percentages, data &amp; probability (Desmos stats), Expression of Ideas</p>
-  <table><thead><tr><th style="width:108px">Day</th><th>Math</th><th>Reading &amp; Writing</th></tr></thead><tbody>
-    <tr><td class="day">Mon Aug 3</td><td>Ratios, rates, proportions &amp; units</td><td>Inferences</td></tr>
-    <tr><td class="day">Tue Aug 4</td><td>Percentages</td><td>Information &amp; Ideas — mixed review</td></tr>
-    <tr><td class="day">Wed Aug 5</td><td>One-variable data — center &amp; spread (Desmos: mean/median/stdev)</td><td>Transitions</td></tr>
-    <tr><td class="day">Thu Aug 6</td><td>Two-variable data &amp; scatterplots (Desmos: regression, the <code>~</code> trick)</td><td>Rhetorical Synthesis</td></tr>
-    <tr><td class="day">Fri Aug 7</td><td>Probability &amp; conditional probability</td><td>Expression of Ideas — mixed</td></tr>
-    <tr class="rest"><td class="day">Sat Aug 8</td><td colspan="2" class="light">Light — misses + vocabulary.</td></tr>
-    <tr class="rest"><td class="day">Sun Aug 9</td><td colspan="2" class="light">Light — mini-set.</td></tr>
+  <h2>Week 6 &middot; Geometry &amp; Trig + Conventions begins</h2>
+  <p class="wk-sub">Aug 3 – 9 &middot; Medium/Advanced Geometry (U9/U13), Medium: Conventions (U7) &middot; Test 4 Sat Aug 8</p>
+  <table><thead><tr><th style="width:92px">Day</th><th>Math — Khan + Bank</th><th>English — Khan + Bank + Wren</th></tr></thead><tbody>
+    <tr><td class="day">Mon Aug 3<small>~5h</small></td><td><div class="cell-line"><span class="k">Khan U9</span> Right triangle trigonometry · Unit circle trigonometry</div><div class="cell-line"><span class="b">Bank</span> Right triangles &amp; trig</div></td><td><div class="cell-line"><span class="k">Khan U9</span> Words in context (advanced)</div><div class="cell-line"><span class="b">Bank</span> Words in Context (hard)</div><div class="cell-line"><span class="w">Wren</span> Bk1 Ch38–39 — Prepositions</div></td></tr>
+    <tr><td class="day">Tue Aug 4<small>~5h</small></td><td><div class="cell-line"><span class="k">Khan U9</span> Circle theorems · Circle equations</div><div class="cell-line"><span class="b">Bank</span> Circles <span class="flag">precision</span></div></td><td><div class="cell-line"><span class="k">Khan U8</span> Central ideas and details (advanced)</div><div class="cell-line"><span class="b">Bank</span> Central Ideas (hard)</div></td></tr>
+    <tr><td class="day">Wed Aug 5<small>~6h</small></td><td><div class="cell-line"><span class="k">Khan U13</span> Area/volume · Right triangle trig · Circle equations (advanced)</div><div class="cell-line"><span class="b">Bank</span> Geometry &amp; Trig (hard)</div></td><td><div class="cell-line"><span class="k">Khan U7</span> Boundaries · <span class="k">U12</span> Punctuation</div><div class="cell-line"><span class="b">Bank</span> Boundaries</div><div class="cell-line"><span class="w">Wren</span> Bk2 Ch26 — Punctuation</div></td></tr>
+    <tr><td class="day">Thu Aug 6<small>~6h</small></td><td><div class="cell-line"><span class="k">Khan U12</span> Advanced Math (keep warm)</div><div class="cell-line"><span class="b">Bank</span> Advanced Math hard · Desmos</div></td><td><div class="cell-line"><span class="k">Khan U7</span> Form, Structure &amp; Sense · <span class="k">U12</span> Subject-verb agreement</div><div class="cell-line"><span class="b">Bank</span> Form, Structure &amp; Sense</div><div class="cell-line"><span class="w">Wren</span> Bk2 Ch17–18 — Agreement; Nouns &amp; Pronouns</div></td></tr>
+    <tr class="rest"><td class="day">Fri Aug 7</td><td colspan="2" class="light">Lighter (pre-test) — Geometry mixed <span class="flag">precision</span>; Conventions mixed; error log.</td></tr>
+    <tr class="test"><td class="day">Sat Aug 8</td><td colspan="2"><span class="ev">Practice Test 4.</span> Full Bluebook + review.</td></tr>
+    <tr class="rest"><td class="day">Sun Aug 9</td><td colspan="2" class="light">Light — analyze Test 4, log.</td></tr>
   </tbody></table>
 
-  <h2>Week 7 &middot; Finish Data, start Geometry</h2>
-  <p class="wk-sub">Aug 10 – 16 &middot; inference &amp; statistical claims, area/volume, refreshers &middot; Test 4</p>
-  <table><thead><tr><th style="width:108px">Day</th><th>Math</th><th>Reading &amp; Writing</th></tr></thead><tbody>
-    <tr><td class="day">Mon Aug 10</td><td>Inference &amp; margin of error; evaluating statistical claims</td><td>Conventions — refresh <span class="light">(hard)</span></td></tr>
-    <tr><td class="day">Tue Aug 11</td><td>PSDA — mixed timed</td><td>Words in Context — refresh <span class="light">(hard)</span></td></tr>
-    <tr><td class="day">Wed Aug 12</td><td>Area &amp; volume; lines, angles &amp; triangles</td><td>Command of Evidence — refresh</td></tr>
-    <tr class="rest"><td class="day">Thu Aug 13</td><td colspan="2" class="light">Light pre-test review.</td></tr>
-    <tr class="test"><td class="day">Fri Aug 14</td><td colspan="2"><span class="ev">Practice Test 4.</span> Full Bluebook + review.</td></tr>
-    <tr class="rest"><td class="day">Sat Aug 15</td><td colspan="2" class="light">Light — analyze Test 4, log.</td></tr>
-    <tr class="rest"><td class="day">Sun Aug 16</td><td colspan="2" class="light">Light — weak-skill mini-set.</td></tr>
+  <h2>Week 7 &middot; Conventions + Expression finish</h2>
+  <p class="wk-sub">Aug 10 – 16 &middot; Advanced Expression + Conventions (U10), Grammar (U12) &middot; Test 5 Sat Aug 15</p>
+  <table><thead><tr><th style="width:92px">Day</th><th>Math — Khan + Bank</th><th>English — Khan + Bank + Wren</th></tr></thead><tbody>
+    <tr><td class="day">Mon Aug 10<small>~5h</small></td><td><div class="cell-line"><span class="k">Khan U12</span> weakest Advanced Math from tests</div><div class="cell-line"><span class="b">Bank</span> hard</div></td><td><div class="cell-line"><span class="k">Khan U10</span> Boundaries · <span class="k">U12</span> Linking clauses · Supplements</div><div class="cell-line"><span class="b">Bank</span> Boundaries (hard)</div><div class="cell-line"><span class="w">Wren</span> Bk1 Ch40–41 + Bk2 Ch22 — Conjunctions</div></td></tr>
+    <tr><td class="day">Tue Aug 11<small>~5h</small></td><td><div class="cell-line"><span class="b">Bank</span> Advanced Math + PSDA mixed (hard)</div></td><td><div class="cell-line"><span class="k">Khan U10</span> Transitions · <span class="k">U12</span> Subject-verb agreement · Pronoun-antecedent · Verb forms</div><div class="cell-line"><span class="b">Bank</span> Transitions</div><div class="cell-line"><span class="w">Wren</span> Bk2 Ch12–14 — Synthesis</div></td></tr>
+    <tr><td class="day">Wed Aug 12<small>~5h</small></td><td><div class="cell-line"><span class="b">Bank</span> Full Math module — timed</div></td><td><div class="cell-line"><span class="k">Khan U10</span> Rhetorical synthesis</div><div class="cell-line"><span class="b">Bank</span> Rhetorical Synthesis</div></td></tr>
+    <tr><td class="day">Thu Aug 13<small>~4h</small></td><td><div class="cell-line"><span class="b">Bank</span> Weak-spot set (hard) <span class="flag">precision</span></div></td><td><div class="cell-line"><span class="k">Khan U12</span> Plurals &amp; possessives · Subject-modifier placement</div><div class="cell-line"><span class="b">Bank</span> Information &amp; Ideas mixed (hard)</div></td></tr>
+    <tr class="rest"><td class="day">Fri Aug 14</td><td colspan="2" class="light">Lighter (pre-test) — error log review only.</td></tr>
+    <tr class="test"><td class="day">Sat Aug 15</td><td colspan="2"><span class="ev">Practice Test 5.</span> Full Bluebook + review.</td></tr>
+    <tr class="rest"><td class="day">Sun Aug 16</td><td colspan="2" class="light">Light — analyze Test 5, log.</td></tr>
   </tbody></table>
 
-  <h2>Week 8 &middot; Geometry &amp; Trig + weak spots</h2>
-  <p class="wk-sub">Aug 17 – 23 &middot; trig, circles, then target whatever the tests keep flagging</p>
-  <table><thead><tr><th style="width:108px">Day</th><th>Math</th><th>Reading &amp; Writing</th></tr></thead><tbody>
-    <tr><td class="day">Mon Aug 17</td><td>Right triangles &amp; trigonometry (SOH-CAH-TOA, special triangles)</td><td>Weakest R&amp;W skill from tests <span class="light">(hard)</span></td></tr>
-    <tr><td class="day">Tue Aug 18</td><td>Circles — equation, arc &amp; sector</td><td>2nd-weakest R&amp;W skill <span class="light">(hard)</span></td></tr>
-    <tr><td class="day">Wed Aug 19</td><td>Geometry &amp; Trig — mixed</td><td>Transitions / Rhetorical Synthesis <span class="light">(hard)</span></td></tr>
-    <tr><td class="day">Thu Aug 20</td><td>Weakest Math domain from tests <span class="light">(hard)</span></td><td>Mixed R&amp;W <span class="light">(hard)</span></td></tr>
-    <tr><td class="day">Fri Aug 21</td><td>Full Math module — timed, mixed, hard</td><td>Full R&amp;W module — timed, mixed</td></tr>
-    <tr class="rest"><td class="day">Sat Aug 22</td><td colspan="2" class="light">Light — misses + vocabulary.</td></tr>
-    <tr class="rest"><td class="day">Sun Aug 23</td><td colspan="2" class="light">Light — mini-set.</td></tr>
+  <h2>Week 8 &middot; Challenge units + data-driven targeting</h2>
+  <p class="wk-sub">Aug 17 – 23 &middot; R&amp;W Challenge (U11), Advanced Math (U12) &middot; Test 6 Sat Aug 22</p>
+  <table><thead><tr><th style="width:92px">Day</th><th>Math — Khan + Bank</th><th>English — Khan + Bank + Wren</th></tr></thead><tbody>
+    <tr><td class="day">Mon Aug 17<small>~5h</small></td><td><div class="cell-line"><span class="k">Khan U12/U11</span> top weak skill from tests</div><div class="cell-line"><span class="b">Bank</span> hard</div></td><td><div class="cell-line"><span class="k">Khan U11</span> Challenge — top weak domain</div><div class="cell-line"><span class="b">Bank</span> top weak skill (hard)</div></td></tr>
+    <tr><td class="day">Tue Aug 18<small>~5h</small></td><td><div class="cell-line"><span class="k">Khan U12/U13</span> 2nd weak skill</div><div class="cell-line"><span class="b">Bank</span> hard</div></td><td><div class="cell-line"><span class="k">Khan U11</span> Challenge — 2nd weak domain</div><div class="cell-line"><span class="b">Bank</span> 2nd weak skill (hard)</div><div class="cell-line"><span class="w">Wren</span> revisit weakest grammar chapter</div></td></tr>
+    <tr><td class="day">Wed Aug 19<small>~5h</small></td><td><div class="cell-line"><span class="k">Khan U12</span> Advanced Math (ongoing)</div><div class="cell-line"><span class="b">Bank</span> Advanced Math hard · Desmos <span class="flag">precision</span></div></td><td><div class="cell-line"><span class="k">Khan U11</span> Challenge — mixed</div><div class="cell-line"><span class="b">Bank</span> Mixed reading (hard)</div></td></tr>
+    <tr><td class="day">Thu Aug 20<small>~4h</small></td><td><div class="cell-line"><span class="b">Bank</span> Full Math module — timed, hard</div></td><td><div class="cell-line"><span class="b">Bank</span> Full R&amp;W module — timed</div></td></tr>
+    <tr class="rest"><td class="day">Fri Aug 21</td><td colspan="2" class="light">Lighter (pre-test) — short mixed hard timed; error log.</td></tr>
+    <tr class="test"><td class="day">Sat Aug 22</td><td colspan="2"><span class="ev">Practice Test 6.</span> Full Bluebook + review.</td></tr>
+    <tr class="rest"><td class="day">Sun Aug 23</td><td colspan="2" class="light">Light — analyze Test 6, log.</td></tr>
   </tbody></table>
 
-  <h2>Week 9 &middot; Hard mixed + timing</h2>
-  <p class="wk-sub">Aug 24 – 30 &middot; full-difficulty mixed sets under the clock &middot; Test 5</p>
-  <table><thead><tr><th style="width:108px">Day</th><th>Math</th><th>Reading &amp; Writing</th></tr></thead><tbody>
-    <tr><td class="day">Mon Aug 24</td><td>Mixed hard, timed — Algebra + Advanced</td><td>Mixed hard, timed — Conventions + Craft</td></tr>
-    <tr><td class="day">Tue Aug 25</td><td>Mixed hard — PSDA + Geometry/Trig</td><td>Mixed hard — Information + Expression</td></tr>
-    <tr><td class="day">Wed Aug 26</td><td>Weak-spot targeted <span class="light">(hard)</span></td><td>Weak-spot targeted <span class="light">(hard)</span></td></tr>
-    <tr class="rest"><td class="day">Thu Aug 27</td><td colspan="2" class="light">Light pre-test review.</td></tr>
-    <tr class="test"><td class="day">Fri Aug 28</td><td colspan="2"><span class="ev">Practice Test 5.</span> Full Bluebook + review.</td></tr>
-    <tr class="rest"><td class="day">Sat Aug 29</td><td colspan="2" class="light">Light — analyze Test 5, log.</td></tr>
-    <tr class="rest"><td class="day">Sun Aug 30</td><td colspan="2" class="light">Light — weak-skill mini-set.</td></tr>
+  <h2>Week 9 &middot; Challenge + timing</h2>
+  <p class="wk-sub">Aug 24 – 30 &middot; full difficulty under the clock &middot; Test 7 Sat Aug 29</p>
+  <table><thead><tr><th style="width:92px">Day</th><th>Math — Khan + Bank</th><th>English — Khan + Bank + Wren</th></tr></thead><tbody>
+    <tr><td class="day">Mon Aug 24<small>~5h</small></td><td><div class="cell-line"><span class="b">Bank</span> Mixed hard timed — Advanced Math + Data</div></td><td><div class="cell-line"><span class="k">Khan U11</span> Command of evidence · Words in context (Challenge)</div><div class="cell-line"><span class="b">Bank</span> Mixed hard — Craft + Info</div></td></tr>
+    <tr><td class="day">Tue Aug 25<small>~5h</small></td><td><div class="cell-line"><span class="k">Khan U10</span> Algebra maintenance (if shaky)</div><div class="cell-line"><span class="b">Bank</span> Mixed hard — Geometry + Algebra</div></td><td><div class="cell-line"><span class="k">Khan U11</span> Transitions + rhetorical synthesis · Boundaries + FSS (Challenge)</div><div class="cell-line"><span class="b">Bank</span> Mixed hard — Conventions + Expression</div><div class="cell-line"><span class="w">Wren</span> Bk2 Ch23 — Order of Words</div></td></tr>
+    <tr><td class="day">Wed Aug 26<small>~4h</small></td><td><div class="cell-line"><span class="b">Bank</span> Weak-spot (hard) <span class="flag">precision</span></div></td><td><div class="cell-line"><span class="b">Bank</span> Weak-spot (hard)</div></td></tr>
+    <tr class="rest"><td class="day">Thu Aug 27</td><td colspan="2" class="light">Lighter (pre-test) — error log review.</td></tr>
+    <tr class="rest"><td class="day">Fri Aug 28</td><td colspan="2" class="light">Light — rest-focused; test tomorrow.</td></tr>
+    <tr class="test"><td class="day">Sat Aug 29</td><td colspan="2"><span class="ev">Practice Test 7.</span> Full Bluebook + review.</td></tr>
+    <tr class="rest"><td class="day">Sun Aug 30</td><td colspan="2" class="light">Light — analyze Test 7, log.</td></tr>
   </tbody></table>
 
   <h2>Week 10 &middot; Final tuning — school resumes</h2>
-  <p class="wk-sub">Aug 31 – Sep 6 &middot; 2h+2h until Sep 1, then 1h+1h from Sep 2 &middot; dress rehearsal</p>
-  <table><thead><tr><th style="width:108px">Day</th><th>Math</th><th>Reading &amp; Writing</th></tr></thead><tbody>
-    <tr><td class="day">Mon Aug 31</td><td>Full timed module + pacing review <span class="light">(2h)</span></td><td>Full timed module + pacing <span class="light">(2h)</span></td></tr>
-    <tr><td class="day">Tue Sep 1</td><td>Top-2 weak skills <span class="light">(hard, 2h)</span></td><td>Top-2 weak skills <span class="light">(hard, 2h)</span></td></tr>
-    <tr><td class="day">Wed Sep 2</td><td>Weak-skill set, ~10 q <span class="light">(1h)</span></td><td>Weak-skill set, ~10 q <span class="light">(1h)</span></td></tr>
-    <tr><td class="day">Thu Sep 3</td><td>Mixed quick set + error-log review <span class="light">(1h)</span></td><td>Mixed quick set + error-log review <span class="light">(1h)</span></td></tr>
+  <p class="wk-sub">Aug 31 – Sep 6 &middot; 2h+2h until Sep 1, then 1h+1h &middot; dress rehearsal Sat Sep 5</p>
+  <table><thead><tr><th style="width:92px">Day</th><th>Math</th><th>English</th></tr></thead><tbody>
+    <tr><td class="day">Mon Aug 31<small>~5h</small></td><td><div class="cell-line"><span class="b">Bank</span> Full timed module + pacing review</div></td><td><div class="cell-line"><span class="b">Bank</span> Full timed module + pacing review</div></td></tr>
+    <tr><td class="day">Tue Sep 1<small>~5h</small></td><td><div class="cell-line"><span class="b">Bank</span> Advanced Math + top weak skill (hard)</div></td><td><div class="cell-line"><span class="b">Bank</span> Craft + Info top weak skills (hard)</div></td></tr>
+    <tr><td class="day">Wed Sep 2<small>~2h</small></td><td><div class="cell-line"><span class="b">Bank</span> Weak-skill set ~10 q (1h)</div></td><td><div class="cell-line"><span class="k">Khan U12</span> grammar drill + <span class="b">Bank</span> ~10 q (1h)</div></td></tr>
+    <tr><td class="day">Thu Sep 3<small>~2h</small></td><td><div class="cell-line"><span class="b">Bank</span> Mixed quick set + error log (1h)</div></td><td><div class="cell-line"><span class="b">Bank</span> Mixed quick set + error log (1h)</div></td></tr>
     <tr class="rest"><td class="day">Fri Sep 4</td><td colspan="2" class="light">Light (~1h) — review notes, no new content; early night.</td></tr>
-    <tr class="reh"><td class="day">Sat Sep 5</td><td colspan="2"><span class="ev">Practice Test 6 — dress rehearsal.</span> Saturday morning, exact exam-day timing.</td></tr>
-    <tr class="rest"><td class="day">Sun Sep 6</td><td colspan="2" class="light">Light — review Test 6 misses only; rest.</td></tr>
+    <tr class="reh"><td class="day">Sat Sep 5</td><td colspan="2"><span class="ev">Practice Test 8 — dress rehearsal.</span> Saturday morning, exact exam-day timing.</td></tr>
+    <tr class="rest"><td class="day">Sun Sep 6</td><td colspan="2" class="light">Light — review Test 8 misses only; rest.</td></tr>
   </tbody></table>
 
   <h2>Week 11 &middot; Taper to exam day</h2>
-  <p class="wk-sub">Sep 7 – 12 &middot; sharpen, don't cram &middot; 1h+1h, lightening toward Saturday</p>
-  <table><thead><tr><th style="width:108px">Day</th><th>Math</th><th>Reading &amp; Writing</th></tr></thead><tbody>
-    <tr><td class="day">Mon Sep 7</td><td>Error-log top items, ~5–8 q <span class="light">(med)</span></td><td>Error-log top items, ~5–8 q <span class="light">(med)</span></td></tr>
-    <tr><td class="day">Tue Sep 8</td><td>Desmos reflex drill</td><td>Conventions quick-rules pass</td></tr>
+  <p class="wk-sub">Sep 7 – 12 &middot; sharpen, don't cram</p>
+  <table><thead><tr><th style="width:92px">Day</th><th>Math</th><th>English</th></tr></thead><tbody>
+    <tr><td class="day">Mon Sep 7<small>~2h</small></td><td><div class="cell-line"><span class="b">Bank</span> Error-log top items — Advanced Math, ~5–8 q</div></td><td><div class="cell-line"><span class="b">Bank</span> Error-log top items — Craft &amp; Info, ~5–8 q</div></td></tr>
+    <tr><td class="day">Tue Sep 8<small>~2h</small></td><td><div class="cell-line">Desmos reflex drill <span class="flag">precision</span></div></td><td><div class="cell-line"><span class="k">Khan U12</span> grammar quick pass · <span class="w">Wren</span> Ch26 skim</div></td></tr>
     <tr class="rest"><td class="day">Wed Sep 9</td><td colspan="2" class="light">Formula-vault review + one short mixed set. Confidence, not cramming.</td></tr>
     <tr class="rest"><td class="day">Thu Sep 10</td><td colspan="2" class="light">Skim the error log; one short timed mini-section to hold rhythm.</td></tr>
     <tr class="rest"><td class="day">Fri Sep 11</td><td colspan="2" class="light"><b>Rest.</b> Pack admission ticket, ID, charged device, snacks; check the route. Light formula skim only. Early night.</td></tr>
     <tr class="exam"><td class="day">Sat Sep 12</td><td colspan="2"><span class="ev">Exam day.</span> Saturday morning. Trust the work.</td></tr>
   </tbody></table>
 
-  <p class="foot">Companion to the SAT Flight Plan. Targeted sets: satsuiteeducatorquestionbank.collegeboard.org &middot; Full tests: bluebook.collegeboard.org &middot; This is version 1 — the daily skill order re-weights once the Jul 1 baseline is in.</p>
+  <p class="foot">Companion to the SAT Flight Plan &middot; v4, exact Khan lessons, tuned to the July 1 baseline (1240). Khan Math (13 units): khanacademy.org/test-prep/v2-sat-math &middot; Khan R&amp;W (12 units): khanacademy.org/test-prep/sat-reading-and-writing &middot; Bank: satsuiteeducatorquestionbank.collegeboard.org &middot; Tests: bluebook.collegeboard.org</p>
 
 </div>
 </body>

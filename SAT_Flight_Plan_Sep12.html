@@ -34,7 +34,7 @@
 
   /* flight path */
   .path{display:flex; align-items:stretch; gap:0; margin:14px 0 4px; overflow-x:auto; padding-bottom:4px;}
-  .leg{flex:1 1 0; min-width:120px; position:relative; padding:0 4px;}
+  .leg{flex:1 1 0; min-width:92px; position:relative; padding:0 4px;}
   .leg .dot{width:13px; height:13px; border-radius:50%; background:var(--sky); margin:0 auto 9px; position:relative; z-index:2;}
   .leg.base .dot{background:var(--ink);}
   .leg.rehearse .dot{background:var(--amber);}
@@ -88,29 +88,31 @@
 <div class="wrap">
 
   <div class="head">
-    <p class="eyebrow">Digital SAT &middot; Preparation</p>
+    <p class="eyebrow">Digital SAT &middot; Strategy &middot; v3 — tuned to the July 1 baseline</p>
     <h1>SAT Flight Plan</h1>
-    <p class="lede">A ten-week approach to the September 12 exam — heaviest work over the summer, a light touch once school resumes, and a clear target on each leg.</p>
+    <p class="lede">The strategy behind the day-by-day calendar: where the points are, how to use the three resources, and the formulas and Desmos moves to own by exam day. Learn with Khan, drill with the Question Bank, reinforce grammar with Wren &amp; Martin.</p>
     <div class="dest">
-      <span><b>Departure</b> &nbsp;Jul 1, 2026</span>
+      <span><b>Baseline</b> &nbsp;1240 (R&amp;W 610 · Math 630)</span>
+      <span><b>Target</b> &nbsp;1350+</span>
       <span><b>Exam day</b> &nbsp;Sat, Sep 12, 2026</span>
-      <span><b>Target band</b> &nbsp;aim 1350+</span>
-      <span><b>Format</b> &nbsp;Reading &amp; Writing + Math, adaptive</span>
+      <span><b>Tests</b> &nbsp;8 total · 7 remaining</span>
     </div>
   </div>
 
   <h2>Practice-test waypoints</h2>
   <div class="card">
     <div class="path">
-      <div class="leg base"><div class="dot"></div><div class="lbl">TEST 1</div><div class="sub">Wed Jul 1<br>Baseline</div></div>
-      <div class="leg"><div class="dot"></div><div class="lbl">TEST 2</div><div class="sub">Fri Jul 17</div></div>
-      <div class="leg"><div class="dot"></div><div class="lbl">TEST 3</div><div class="sub">Fri Jul 31</div></div>
-      <div class="leg"><div class="dot"></div><div class="lbl">TEST 4</div><div class="sub">Fri Aug 14</div></div>
-      <div class="leg"><div class="dot"></div><div class="lbl">TEST 5</div><div class="sub">Fri Aug 28</div></div>
-      <div class="leg rehearse"><div class="dot"></div><div class="lbl">TEST 6</div><div class="sub">Sat Sep 5<br>Dress rehearsal</div></div>
+      <div class="leg base"><div class="dot"></div><div class="lbl">TEST 1</div><div class="sub">Jul 1<br>Baseline ✓</div></div>
+      <div class="leg"><div class="dot"></div><div class="lbl">TEST 2</div><div class="sub">Sat Jul 11</div></div>
+      <div class="leg"><div class="dot"></div><div class="lbl">TEST 3</div><div class="sub">Sat Jul 25</div></div>
+      <div class="leg"><div class="dot"></div><div class="lbl">TEST 4</div><div class="sub">Sat Aug 8</div></div>
+      <div class="leg"><div class="dot"></div><div class="lbl">TEST 5</div><div class="sub">Sat Aug 15</div></div>
+      <div class="leg"><div class="dot"></div><div class="lbl">TEST 6</div><div class="sub">Sat Aug 22</div></div>
+      <div class="leg"><div class="dot"></div><div class="lbl">TEST 7</div><div class="sub">Sat Aug 29</div></div>
+      <div class="leg rehearse"><div class="dot"></div><div class="lbl">TEST 8</div><div class="sub">Sat Sep 5<br>Dress rehearsal</div></div>
       <div class="leg exam"><div class="dot"></div><div class="lbl">EXAM</div><div class="sub">Sat Sep 12</div></div>
     </div>
-    <p style="margin:14px 0 0; font-size:13px; color:var(--muted);">All six full-length tests run on Bluebook (<a href="https://bluebook.collegeboard.org/">bluebook.collegeboard.org</a>) under real, timed conditions. Summer tests sit on Fridays — they replace that day's normal study. The final test is a Saturday morning to mirror exam day exactly.</p>
+    <p style="margin:14px 0 0; font-size:13px; color:var(--muted);">Bluebook has eight full-length practice tests; one is done, seven remain. They run under real timed conditions on Saturday mornings — spaced ~2 weeks apart while learning, then weekly through the endgame to build stamina — mirroring the Saturday exam. The last is a full dress rehearsal.</p>
   </div>
 
   <h2>What to prioritize — Math</h2>
@@ -118,13 +120,13 @@
     <table>
       <thead><tr><th>Priority</th><th>Domain</th><th>Weight</th><th>Skills to drill</th><th>Start at</th></tr></thead>
       <tbody>
-        <tr><td><span class="pri p1">1</span></td><td><b>Algebra</b></td><td class="wt">~35%</td><td>Linear equations (1 &amp; 2 variables), systems of linear equations, linear functions, linear inequalities</td><td class="diff">Easy &rarr; Med</td></tr>
-        <tr><td><span class="pri p1">2</span></td><td><b>Advanced Math</b></td><td class="wt">~35%</td><td>Equivalent expressions, nonlinear equations &amp; systems, nonlinear functions</td><td class="diff">Med &rarr; Hard</td></tr>
-        <tr><td><span class="pri p2">3</span></td><td>Problem-Solving &amp; Data Analysis</td><td class="wt">~15%</td><td>Ratios/rates/units, percentages, one- &amp; two-variable data, probability, inference from samples, statistical claims</td><td class="diff">Medium</td></tr>
-        <tr><td><span class="pri p3">4</span></td><td>Geometry &amp; Trigonometry</td><td class="wt">~15%</td><td>Area &amp; volume, lines/angles/triangles, right triangles &amp; trig, circles</td><td class="diff">Easy &rarr; Med</td></tr>
+        <tr><td><span class="pri p1">1</span></td><td><b>Advanced Math</b></td><td class="wt">~35%</td><td>Nonlinear equations &amp; systems, nonlinear functions, equivalent expressions — <b>climb Khan's Foundations→Medium→Advanced tiers</b></td><td class="diff">→ Hard</td></tr>
+        <tr><td><span class="pri p1">2</span></td><td><b>Problem-Solving &amp; Data</b></td><td class="wt">~15%</td><td>Ratios/rates/units, percentages, one- &amp; two-variable data, probability, inference, statistical claims</td><td class="diff">Med → Hard</td></tr>
+        <tr><td><span class="pri p2">3</span></td><td>Geometry &amp; Trigonometry</td><td class="wt">~15%</td><td>Area &amp; volume, lines/angles/triangles, right triangles &amp; trig, circles</td><td class="diff">Medium</td></tr>
+        <tr><td><span class="pri p3">4</span></td><td>Algebra</td><td class="wt">~35%</td><td>Already a strength (1 miss at baseline) — maintenance only; skip Khan Foundations</td><td class="diff">Maintain</td></tr>
       </tbody>
     </table>
-    <p style="margin:12px 0 0; font-size:13px; color:var(--muted);">Algebra + Advanced Math are ~70% of the section — that's where the points are. Lock Algebra to near-perfect first (quick wins), then pour time into Advanced Math, where most score gains hide.</p>
+    <p style="margin:12px 0 0; font-size:13px; color:var(--muted);">From the baseline: Advanced Math is the biggest lever (7 of 14 math misses) and Algebra is already strong (1 miss), so time flows from Algebra to Advanced Math and Data. Her near-perfect Module 1 means she's reaching the hard module — so push Advanced Math to the hard tier.</p>
   </div>
 
   <h2>What to prioritize — Reading &amp; Writing</h2>
@@ -132,58 +134,63 @@
     <table>
       <thead><tr><th>Priority</th><th>Domain</th><th>Weight</th><th>Skills to drill</th><th>Start at</th></tr></thead>
       <tbody>
-        <tr><td><span class="pri p1">1</span></td><td><b>Standard English Conventions</b></td><td class="wt">~26%</td><td>Boundaries (punctuation, sentence breaks); Form, Structure &amp; Sense (agreement, verb tense, pronouns, modifiers)</td><td class="diff">Easy &rarr; Med</td></tr>
-        <tr><td><span class="pri p1">2</span></td><td><b>Craft &amp; Structure</b></td><td class="wt">~28%</td><td>Words in Context, Text Structure &amp; Purpose, Cross-Text Connections</td><td class="diff">Medium</td></tr>
-        <tr><td><span class="pri p2">3</span></td><td>Information &amp; Ideas</td><td class="wt">~26%</td><td>Central Ideas &amp; Details, Command of Evidence (text + data), Inferences</td><td class="diff">Med &rarr; Hard</td></tr>
-        <tr><td><span class="pri p2">4</span></td><td>Expression of Ideas</td><td class="wt">~20%</td><td>Transitions, Rhetorical Synthesis</td><td class="diff">Medium</td></tr>
+        <tr><td><span class="pri p1">1</span></td><td><b>Craft &amp; Structure</b></td><td class="wt">~28%</td><td>Words in Context, Text Structure &amp; Purpose, Cross-Text Connections</td><td class="diff">Med → Hard</td></tr>
+        <tr><td><span class="pri p1">2</span></td><td><b>Information &amp; Ideas</b></td><td class="wt">~26%</td><td>Central Ideas &amp; Details, Command of Evidence (text + data), Inferences</td><td class="diff">Med → Hard</td></tr>
+        <tr><td><span class="pri p2">3</span></td><td>Standard English Conventions</td><td class="wt">~26%</td><td>Boundaries; Form, Structure &amp; Sense — refresh via Wren &amp; Martin</td><td class="diff">Refresh</td></tr>
+        <tr><td><span class="pri p3">4</span></td><td>Expression of Ideas</td><td class="wt">~20%</td><td>Transitions, Rhetorical Synthesis — already strong (1 miss)</td><td class="diff">Maintain</td></tr>
       </tbody>
     </table>
-    <p style="margin:12px 0 0; font-size:13px; color:var(--muted);">Conventions is rule-based, so it gives the fastest, most reliable gains — start there. Words in Context rewards steady vocabulary work. Inference and Command of Evidence improve more slowly, so build them through the back half.</p>
+    <p style="margin:12px 0 0; font-size:13px; color:var(--muted);">The baseline flipped the reading plan: Craft &amp; Structure and Information &amp; Ideas hold 10 of her 14 R&amp;W misses, so they lead. Standard English Conventions (3 misses) and Expression of Ideas (1) are relative strengths — refresh them with Wren &amp; Martin rather than leading with them.</p>
   </div>
 
   <div class="note" style="margin-bottom:14px;"><b>Difficulty strategy.</b> The digital SAT is adaptive: how she does on Module 1 decides whether Module 2 is the easier or the harder version — and the harder version has a higher score ceiling. So lock accuracy on Easy and Medium first (they're the majority and they route her into the high-ceiling module), then train Hard questions to lift the top end.</div>
 
   <h2>The ten weeks, by phase</h2>
   <div class="card">
-    <div class="phase"><div class="when">Jul 1<small>Pre-flight</small></div><div class="what"><b>Baseline.</b> Full Bluebook test, then study the score report. This sets the real priorities.<span class="tag test">Test 1</span></div></div>
-    <div class="phase"><div class="when">Jul 2 – 17<small>Climb</small></div><div class="what"><b>Foundations &amp; quick wins.</b> Math: Algebra to near-perfect. R&amp;W: Standard English Conventions (the rules). Start the error log.<span class="tag test">Test 2 · Jul 17</span></div></div>
-    <div class="phase"><div class="when">Jul 18 – Aug 1<small>Cruise I</small></div><div class="what"><b>Highest-weight cores.</b> Math: Advanced Math. R&amp;W: Craft &amp; Structure + Words in Context.<span class="tag test">Test 3 · Jul 31</span></div></div>
-    <div class="phase"><div class="when">Aug 2 – 14<small>Cruise II</small></div><div class="what"><b>Round out.</b> Math: Problem-Solving &amp; Data Analysis, then Geometry &amp; Trig. R&amp;W: Information &amp; Ideas (evidence, inference).<span class="tag test">Test 4 · Aug 14</span></div></div>
-    <div class="phase"><div class="when">Aug 15 – 28<small>Descent</small></div><div class="what"><b>Push to Hard &amp; target weak spots</b> surfaced by the tests. Math: Hard Algebra/Advanced. R&amp;W: Expression of Ideas + Hard sets.<span class="tag test">Test 5 · Aug 28</span></div></div>
-    <div class="phase"><div class="when">Aug 29 – Sep 11<small>Final approach</small></div><div class="what"><b>Simulate, time, taper.</b> School resumes Sep 2 → evenings only, lighter. Dress rehearsal Sat Sep 5. Sep 7–11: review the error log, no new material; rest Friday.<span class="tag reh">Test 6 · Sep 5</span></div></div>
+    <div class="phase"><div class="when">Jul 1<small>Pre-flight</small></div><div class="what"><b>Baseline — done.</b> 1240; priorities set from the score report.<span class="tag test">Test 1 ✓</span></div></div>
+    <div class="phase"><div class="when">Jul 2 – 19<small>Climb</small></div><div class="what"><b>Advanced Math from the ground up</b> (Khan Foundations→Advanced) + Craft &amp; Structure and Information &amp; Ideas. Start the error-log sheet.<span class="tag test">Test 2 · Jul 11</span></div></div>
+    <div class="phase"><div class="when">Jul 20 – Aug 2<small>Cruise I</small></div><div class="what"><b>Problem-Solving &amp; Data</b> (Desmos stats &amp; regression) + reading depth; reinforce hard Advanced Math.<span class="tag test">Test 3 · Jul 25</span></div></div>
+    <div class="phase"><div class="when">Aug 3 – 16<small>Cruise II</small></div><div class="what"><b>Geometry &amp; Trig</b>, then Conventions &amp; Expression refresh with Wren &amp; Martin. Keep Advanced Math warm.<span class="tag test">Tests 4 &amp; 5 · Aug 8, 15</span></div></div>
+    <div class="phase"><div class="when">Aug 17 – 30<small>Descent</small></div><div class="what"><b>Hard mixed sets + data-driven targeting</b> of whatever the tests keep flagging; full timed modules.<span class="tag test">Tests 6 &amp; 7 · Aug 22, 29</span></div></div>
+    <div class="phase"><div class="when">Aug 31 – Sep 11<small>Final approach</small></div><div class="what"><b>Simulate, time, taper.</b> School resumes Sep 2 → 1h+1h. Dress rehearsal Sat Sep 5. Sep 7–11: review only, then rest.<span class="tag reh">Test 8 · Sep 5</span></div></div>
     <div class="phase"><div class="when">Sep 12<small>Landing</small></div><div class="what"><b>Exam day.</b> Saturday morning.</div></div>
   </div>
 
   <h2>Daily rhythm</h2>
   <div class="grid2">
     <div class="card">
-      <p class="eyebrow" style="color:var(--ink);">Summer weekdays (Mon–Fri)</p>
+      <p class="eyebrow" style="color:var(--ink);">Summer weekday — learn → drill → reinforce</p>
       <ul class="rhythm" style="margin:0; padding-left:18px;">
-        <li><b>2 hours Math</b> + <b>2 hours English</b>, in focused blocks.</li>
-        <li>Run each hour as ~50 min drilling a target skill, then ~10 min logging and re-working every miss.</li>
-        <li>Split the day so the two subjects don't blur — e.g. Math in the morning, English after lunch.</li>
+        <li><b>Math (~2–3h):</b> Khan lesson on the day's skill (videos + practice), then a Question Bank set on the same skill, then log misses.</li>
+        <li><b>English (~2–3h):</b> Khan lesson + Question Bank set, plus the mapped Wren &amp; Martin chapter on grammar days.</li>
+        <li><b>~4–5h most days; up to ~6h</b> on heavy new-concept days. If fading, drop the second Bank set, not the Khan lesson.</li>
       </ul>
     </div>
     <div class="card">
       <p class="eyebrow" style="color:var(--ink);">Weekends &amp; school weeks</p>
       <ul class="rhythm" style="margin:0; padding-left:18px;">
-        <li><b>Weekends:</b> light, 2 hours max — error-log review, vocabulary, or rest.</li>
-        <li><b>From Sep 2 (school 7–3):</b> ~1–1.5 hours in the evening, mostly review and short timed sets.</li>
-        <li><b>Fri Sep 11:</b> very light, then rest before exam day.</li>
+        <li><b>Weekends:</b> light (2h max) — error-log review, vocabulary, or rest. Practice tests take the Saturday morning.</li>
+        <li><b>From Sep 2 (school 7–3):</b> 1h Math + 1h English in the evening, mostly review and short timed sets.</li>
+        <li><b>Fri Sep 11:</b> rest and logistics before exam day. The exact per-day skills live in the day-by-day calendar.</li>
       </ul>
     </div>
   </div>
 
-  <h2>Daily fuel — the Educator Question Bank</h2>
+  <h2>The three resources</h2>
   <div class="card">
-    <p style="margin-top:0; font-size:13.5px; color:var(--muted);">Use College Board's <a href="https://satsuiteeducatorquestionbank.collegeboard.org/digital/search">Educator Question Bank</a> to build a targeted set for each day's skill — it holds <b>1,756 Math</b> and <b>1,688 Reading &amp; Writing</b> official questions, plenty for the whole summer without repeats.</p>
+    <p style="margin-top:0; font-size:13.5px; color:var(--muted);"><b>Learn → drill → reinforce.</b> Each day pairs a Khan Academy lesson (to learn the skill) with a Question Bank set (to drill it), and — on grammar days — a Wren &amp; Martin chapter (to reinforce it). The exact per-day assignments live in the day-by-day calendar; this is how to use each tool.</p>
+    <p class="eyebrow" style="color:var(--ink); margin-top:6px;">Khan Academy — learn</p>
+    <p style="font-size:13.5px; margin:4px 0 10px;">Math (<a href="https://www.khanacademy.org/test-prep/v2-sat-math">v2-sat-math</a>) is tiered <b>Foundations → Medium → Advanced</b> per domain — climb all three for Advanced Math, skip Foundations for Algebra. Reading &amp; Writing (<a href="https://www.khanacademy.org/test-prep/sat-reading-and-writing">sat-reading-and-writing</a>) is by domain and skill. Watch every video, follow along, and do the practice to "level up."</p>
+    <p class="eyebrow" style="color:var(--ink);">Question Bank — drill</p>
     <ol class="flow">
-      <li>Open <b>Create a Question Set</b>. Step 1: Assessment = <code>SAT</code>. Step 2: Section = <code>Math</code> or <code>Reading and Writing</code>.</li>
-      <li>Step 3: tick the <b>Domain</b> for today's focus (e.g. Algebra, or Standard English Conventions), then <b>Search</b>.</li>
-      <li>On the results page, use <b>Add Filters → Skill</b> to pick the exact skill, and <b>Difficulty</b> to set the level. Difficulty shows as filled bars: <b>1 = easy, 2 = medium, 3 = hard</b>.</li>
-      <li>Select ~10–15 questions, then <b>Export</b> a PDF <b>with answers &amp; explanations</b>.</li>
-      <li>Work the set, mark every miss, and copy the misses into the error log to re-attempt later in the week.</li>
+      <li>Open <b>Create a Question Set</b>. Assessment = <code>SAT</code>; Section = <code>Math</code> or <code>Reading and Writing</code>.</li>
+      <li>Tick the <b>Domain</b> for the day, then <b>Search</b>.</li>
+      <li><b>Add Filters → Skill</b> and <b>Difficulty</b> (bars: 1 = easy, 2 = medium, 3 = hard).</li>
+      <li>Select ~10–15 questions, <b>Export</b> a PDF with answers &amp; explanations.</li>
+      <li>Mark every miss and log it to the Google Sheet to re-attempt later. <b>1,756 Math</b> and <b>1,688 R&amp;W</b> official questions — no repeats needed.</li>
     </ol>
+    <p class="eyebrow" style="color:var(--ink); margin-top:14px;">Wren &amp; Martin — reinforce grammar</p>
+    <p style="font-size:13.5px; margin:4px 0 0;">Powers Standard English Conventions and Expression of Ideas: punctuation &amp; clauses for <b>Boundaries</b> (Bk2 Ch26; Bk1 Ch3; Bk2 Ch1–4), agreement / pronouns / tenses / modifiers for <b>Form &amp; Sense</b> (Bk2 Ch17–21; Bk1 Ch24–26), conjunctions &amp; synthesis for <b>Transitions</b> and <b>Rhetorical Synthesis</b> (Bk1 Ch40–41; Bk2 Ch12–14, 22). Its clause-analysis also helps parse dense reading passages.</p>
   </div>
 
   <h2>Topic coverage — all confirmed</h2>
@@ -305,9 +312,9 @@
     </ul>
   </div>
 
-  <div class="note"><b>This is version 1</b>, built before the Jul 1 baseline. Once her diagnostic scores come in, the phases re-weight toward her weakest domains — the priorities above are the sensible starting order for a strong-math student building reading speed, not the final word.</div>
+  <div class="note"><b>Version 3 — tuned to the July 1 baseline (1240).</b> Priorities now reflect her real misses: Advanced Math and the two reading domains lead; Algebra, Conventions and Expression are strengths on maintenance. Re-check after each practice test and shift the back half if the trend moves.</div>
 
-  <p class="foot">Built for the Sep 12, 2026 digital SAT. Full tests: bluebook.collegeboard.org &nbsp;·&nbsp; Targeted practice: satsuiteeducatorquestionbank.collegeboard.org</p>
+  <p class="foot">Built for the Sep 12, 2026 digital SAT · v3. Learn: khanacademy.org/test-prep &nbsp;·&nbsp; Drill: satsuiteeducatorquestionbank.collegeboard.org &nbsp;·&nbsp; Tests: bluebook.collegeboard.org</p>
 
 </div>
 </body>
